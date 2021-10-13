@@ -1,0 +1,27 @@
+.input-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 0 33px;
+}
+
+.input-label{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #756F86;
+    margin: 0 0 7px;
+}
+
+.input{
+    font-size: 16px;
+    line-height: 21px;
+    color: #7C9CBF;
+    background: #FFFFFF;
+    border: 1px solid #DBE2EA;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    padding: 15px 16px;
+    outline: none;
+}
