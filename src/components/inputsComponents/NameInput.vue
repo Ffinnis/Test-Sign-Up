@@ -9,15 +9,19 @@
 </template>
 
 <script>
-    import {ref} from "vue";
+    import {ref, computed} from "vue";
+    import {useStore} from "vuex";
     export default {
         name: "NameInput",
         setup() {
+            const store = useStore()
             const nameInput = ref('')
-            const isValid = ref(false)
+            const isValid = computed(() => store.state.isNameValid)
 
             const checkNameInput = () => {
-                isValid.value = !/\d/.test(nameInput.value) && !/\W/.test(nameInput.value);
+                !/\d/.test(nameInput.value) && !/[\d\-\)\(\+]+/.test(nameInput.value) ?
+                    store.dispatch('setNameValid', true) :
+                    store.dispatch('setNameValid', false)
             }
 
             return{

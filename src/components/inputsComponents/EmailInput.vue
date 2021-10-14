@@ -9,24 +9,25 @@
 </template>
 
 <script>
-    import {ref} from "vue";
+    import {ref, computed} from "vue";
     import * as EmailValidator from 'email-validator';
-
+    import {useStore} from "vuex";
     export default {
         name: "EmailInput",
         setup() {
+            const store = useStore()
             const mailInput = ref('')
-            const isValid = ref(false)
+            const isValid = computed(() => store.state.isMailValid)
 
             const checkMailInput = () => {
-                EmailValidator.validate(mailInput.value) ? isValid.value = true : isValid.value = false
-                console.log(isValid.value)
+                EmailValidator.validate(mailInput.value) ? store.dispatch('setMailValid', true) : store.dispatch('setMailValid', false)
+                console.log(isValid)
             }
 
             return {
                 mailInput, checkMailInput, isValid
             }
-        }
+        },
     }
 </script>
 

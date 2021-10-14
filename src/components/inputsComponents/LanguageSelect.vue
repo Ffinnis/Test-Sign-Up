@@ -1,7 +1,7 @@
 <template>
     <div class="input-container">
         <label class="input-label" for="language">Язык</label>
-        <input id="language" name="language" type="text" hidden>
+        <input id="language" name="language" type="text" :value="selectedOption || ''" hidden>
         <div class="select-input">
             <div class="input">
                 <div class="input-wrapper">
@@ -28,6 +28,7 @@
 
 <script>
     import {ref} from "vue";
+    import {useStore} from "vuex";
 
     export default {
         name: "LanguageSelect",
@@ -37,15 +38,17 @@
         setup() {
             const isSelectOptionsVisible = ref(false)
             const selectedOption = ref(null)
+            const store = useStore()
 
             const setSelectedOption = (el) => {
                 selectedOption.value = el
+                store.dispatch('setLanguageValid', true)
             }
-
 
             const setSelectOptionsVisible = () => {
                  isSelectOptionsVisible.value = !isSelectOptionsVisible.value
             }
+
 
             return {
                 isSelectOptionsVisible, setSelectOptionsVisible, selectedOption, setSelectedOption
@@ -67,8 +70,23 @@
         display: flex;
         flex-direction: column;
         opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+        width: 360px;
+    }
+    .select-input{
+        width: 360px;
+    }
+    @media (max-width: 890px) {
+        .select-input__options-list{
+            width: 320px;
+        }
+        .select-input{
+            max-width: 320px;
+        }
     }
     .select-input__options-list.--active{
+        visibility: visible;
         animation: showDropdown;
         animation-duration: 0.3s;
         animation-iteration-count: 1;
@@ -94,6 +112,7 @@
     }
     .input{
         position: relative;
+        width: 100%;
     }
     .select-input-option:hover{
         background: #EBF4F8;
