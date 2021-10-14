@@ -6,24 +6,28 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d5cfcf8-067b-4b00-a33a-fff4e4092f7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/inputsComponents/Checkbox.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/inputs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/inputs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TheSignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TheSignUp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputsComponents/EmailInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputsComponents/EmailInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputsComponents/LanguageSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputsComponents/LanguageSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputsComponents/NameInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputsComponents/NameInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputsComponents/PhoneInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputsComponents/PhoneInput.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,7 @@
       <workItem from="1634118858062" duration="10122000" />
       <workItem from="1634198343518" duration="7543000" />
       <workItem from="1634212198375" duration="3037000" />
-      <workItem from="1634220648271" duration="1020000" />
+      <workItem from="1634220648271" duration="1252000" />
     </task>
     <servers />
   </component>
@@ -85,7 +89,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
